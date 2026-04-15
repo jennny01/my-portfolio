@@ -1,4 +1,2 @@
-const yearElement = document.getElementById("year");
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+// Auto year
+document.getElementById("year").textContent = new Date().getFullYear();
