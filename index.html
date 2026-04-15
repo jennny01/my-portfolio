@@ -5,14 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jenny | Portfolio</title>
 
-  <meta name="description" content="Jenny's personal portfolio website.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header class="hero">
@@ -38,13 +34,18 @@
 <main>
 
   <!-- ABOUT -->
-  <section id="about" class="section container">
-    <h2>About Me</h2>
-    <img class="profile-pic" src="assets/profile.png" alt="Jenny profile photo">
-    <p>
-      I'm a motivated creator focused on web development and design.
-      I enjoy building fast, responsive, and user-friendly websites.
-    </p>
+  <section id="about" class="section container about-grid">
+    <div class="about-img">
+      <img src="assets/profile.png" alt="Jenny profile photo">
+    </div>
+
+    <div>
+      <h2>About Me</h2>
+      <p>
+        I'm a motivated creator focused on web development and design.
+        I enjoy building websites that are fast, responsive, and easy to use.
+      </p>
+    </div>
   </section>
 
   <!-- PROJECTS -->
@@ -53,31 +54,28 @@
 
     <div class="cards">
 
-      <!-- PROJECT 1 -->
       <article class="card">
         <h3>To-Do List App</h3>
         <p>
-          A modern task manager where users can add, complete, and manage daily tasks.
+          A simple task manager app where users can add, complete, and remove tasks.
         </p>
 
-        <a class="project-btn"
-          href="https://to-do-list-sigma-lac.vercel.app/"
-          target="_blank">
-          Live Demo →
-        </a>
+        <div class="card-actions">
+          <a href="https://to-do-list-sigma-lac.vercel.app/" target="_blank" class="btn small">
+            Live Demo
+          </a>
+        </div>
       </article>
 
-      <!-- PROJECT 2 -->
       <article class="card">
         <h3>School Project Monitoring System</h3>
         <p>
-          A web-based system to track projects, monitor progress,
-          and manage submissions efficiently.
+          A web-based system to track school projects, monitor progress, and manage submissions.
         </p>
 
-        <a class="project-btn ghost" href="#">
-          Coming Soon
-        </a>
+        <div class="card-actions">
+          <a href="#" class="btn ghost small">Coming Soon</a>
+        </div>
       </article>
 
     </div>
@@ -86,20 +84,10 @@
   <!-- SOCIALS -->
   <section id="socials" class="section container">
     <h2>Connect With Me</h2>
-    <p>Follow me on social media:</p>
-
     <div class="social-grid">
-      <a class="social-link" href="https://www.linkedin.com/in/jenny-peralta" target="_blank">
-        LinkedIn
-      </a>
-
-      <a class="social-link" href="https://github.com/jennny01" target="_blank">
-        GitHub
-      </a>
-
-      <a class="social-link" href="https://www.facebook.com/share/1GrUWdiTed/" target="_blank">
-        Facebook
-      </a>
+      <a class="social-link" href="https://www.linkedin.com/in/jenny-peralta" target="_blank">LinkedIn</a>
+      <a class="social-link" href="https://github.com/jennny01" target="_blank">GitHub</a>
+      <a class="social-link" href="https://www.facebook.com/share/1GrUWdiTed/?mibextid=wwXIfr" target="_blank">Facebook</a>
     </div>
   </section>
 
@@ -107,14 +95,14 @@
 
 <footer id="contact" class="footer">
   <div class="container footer-inner">
-    <p>© <span id="year"></span> Jenny. All rights reserved.</p>
-    <a href="mailto:peraltajenny0407@gmail.com">
-      peraltajenny0407@gmail.com
-    </a>
+    <p>© <span id="year"></span> Jenny</p>
+    <a href="mailto:peraltajenny0407@gmail.com">peraltajenny0407@gmail.com</a>
   </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
